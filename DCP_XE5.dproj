@@ -1,0 +1,315 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{ae9b70a6-b2c2-45a0-ba7b-2448a376d73f}</ProjectGuid>
+        <MainSource>DCP_XE5.dpk</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>C:\Documents and Settings\All Users\Documents\RAD Studio\5.0\Bpl\DCPdelphi2007.bpl</DCC_DependencyCheckOutputName>
+        <ProjectVersion>15.3</ProjectVersion>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <AppType>Package</AppType>
+        <FrameworkType>None</FrameworkType>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1036</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Description>DCPcrypt cryptographic component library v2 BETA 3</DCC_Description>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <GenDll>true</GenDll>
+        <GenPackage>true</GenPackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android)'!=''">
+        <VerInfo_IncludeVerInfo>false</VerInfo_IncludeVerInfo>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=preferExternal;largeHeap=False;theme=TitleBar</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Version>7.0</Version>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Version>7.0</Version>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters/>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1036</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">DCP_XE5.dpk</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\12.0\Bpl\VirtualTreesR19.bpl">(untitled)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxCoreRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxCoreRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxLibraryRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxLibraryRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPageControlRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPageControlRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxServerModeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxServerModeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDBXServerModeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDBXServerModeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxFireDACServerModeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxFireDACServerModeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxADOServerModeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxADOServerModeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxEditorsRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxEditorsRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxEditorFieldLinkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxEditorFieldLinkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxWizardControlRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxWizardControlRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxBarEditItemRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxBarEditItemRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarExtDBItemsRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarExtDBItemsRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarExtItemsRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarExtItemsRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarDBNavRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxBarDBNavRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxTabbedMDIRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxTabbedMDIRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDockingRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDockingRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxLayoutControlRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxLayoutControlRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxTreeListRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxTreeListRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxGridRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxGridRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxVerticalGridRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxVerticalGridRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxmdsRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxmdsRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSpellCheckerRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSpellCheckerRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSpreadSheetRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSpreadSheetRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxTileControlRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxTileControlRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxNavBarRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxNavBarRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsCoreRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsCoreRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlackRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlackRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlueprintRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlueprintRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlueRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinBlueRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinCaramelRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinCaramelRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinCoffeeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinCoffeeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDarkRoomRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDarkRoomRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDarkSideRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDarkSideRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDevExpressDarkStyleRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDevExpressDarkStyleRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDevExpressStyleRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinDevExpressStyleRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinFoggyRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinFoggyRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinGlassOceansRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinGlassOceansRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinHighContrastRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinHighContrastRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkiniMaginaryRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkiniMaginaryRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLilianRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLilianRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLiquidSkyRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLiquidSkyRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLondonLiquidSkyRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinLondonLiquidSkyRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMcSkinRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMcSkinRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMetropolisDarkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMetropolisDarkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMetropolisRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMetropolisRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMoneyTwinsRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinMoneyTwinsRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007BlackRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007BlackRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007BlueRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007BlueRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007GreenRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007GreenRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007PinkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007PinkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007SilverRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2007SilverRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010BlackRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010BlackRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010BlueRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010BlueRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010SilverRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2010SilverRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013DarkGrayRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013DarkGrayRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013LightGrayRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013LightGrayRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013WhiteRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinOffice2013WhiteRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinPumpkinRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinPumpkinRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSevenClassicRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSevenClassicRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSevenRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSevenRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSharpPlusRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSharpPlusRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSharpRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSharpRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSilverRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSilverRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSpringTimeRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSpringTimeRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinStardustRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinStardustRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSummer2008RS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinSummer2008RS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinTheAsphaltWorldRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinTheAsphaltWorldRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinValentineRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinValentineRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinVS2010RS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinVS2010RS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinWhiteprintRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinWhiteprintRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinXmas2008BlueRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinXmas2008BlueRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSCoreRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSCoreRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSTeeChartRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSTeeChartRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSLnksRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSLnksRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSDBTeeChartRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSDBTeeChartRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxPScxPCProdRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxPScxPCProdRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridOLAPRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridOLAPRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxdbtrRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxdbtrRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxtrmdRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxtrmdRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxOrgCRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxOrgCRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDBOrRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxDBOrRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxFlowChartRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxFlowChartRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxIconLibraryRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxIconLibraryRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPageControldxBarPopupMenuRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPageControldxBarPopupMenuRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerGridRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerGridRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerTreeBrowserRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerTreeBrowserRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxTreeListdxBarPopupMenuRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxTreeListdxBarPopupMenuRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxGridWizardRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxGridWizardRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsDesignHelperRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsDesignHelperRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinscxPCPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinscxPCPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinscxSchedulerPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinscxSchedulerPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxEditorsHelperRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxEditorsHelperRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxBarPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxBarPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxNavBarPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxNavBarPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxPCPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxPCPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxSchedulerPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinscxSchedulerPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxDLPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxDLPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxBarsPaintersRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxBarsPaintersRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxNavBarPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxNavBarPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxCommonRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxCommonRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxExtCommonRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxExtCommonRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxLCLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxLCLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxPivotGridLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxPivotGridLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxSchedulerLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxSchedulerLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxSSLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxSSLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxTLLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxTLLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxVGridLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxVGridLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxDBOCLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxDBOCLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxDBTVLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxDBTVLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxFCLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxFCLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxGridLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPScxGridLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxOCLnkRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSdxOCLnkRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSPrVwAdvRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSPrVwAdvRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridChartRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxPivotGridChartRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxRibbonRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxRibbonRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxRibbonPainterRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dxSkinsdxRibbonPainterRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerRibbonStyleEventEditorRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dclcxSchedulerRibbonStyleEventEditorRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxRibbonPaintersRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxSkinsdxRibbonPaintersRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSPrVwRibbonRS19.bpl">File C:\Program Files (x86)\Developer Express.VCL\Library\RS19\dcldxPSPrVwRibbonRS19.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madBasic\BDS12\win32\madBasic_.bpl">File C:\madCollection\madBasic\BDS12\win32\madBasic_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madBasic\BDS12\win32\madHelp_.bpl">File C:\madCollection\madBasic\BDS12\win32\madHelp_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madDisAsm\BDS12\win32\madDisAsm_.bpl">File C:\madCollection\madDisAsm\BDS12\win32\madDisAsm_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madExcept\BDS12\win32\madExceptIde_.bpl">File C:\madCollection\madExcept\BDS12\win32\madExceptIde_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madExcept\BDS12\win32\madExcept_.bpl">File C:\madCollection\madExcept\BDS12\win32\madExcept_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madExcept\BDS12\win32\madExceptVcl_.bpl">File C:\madCollection\madExcept\BDS12\win32\madExceptVcl_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\madCollection\madExcept\BDS12\win32\madExceptWizard_.bpl">File C:\madCollection\madExcept\BDS12\win32\madExceptWizard_.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k190.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp190.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k190.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp190.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\12.0\Bpl\Darkroom2RS19.bpl">ExpressSkins - Darkroom2 Skin </Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Android">False</Platform>
+                <Platform value="iOSDevice">False</Platform>
+                <Platform value="iOSSimulator">False</Platform>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="rtl.dcp"/>
+        <DCCReference Include="DCPbase64.pas"/>
+        <DCCReference Include="DCPblockciphers.pas"/>
+        <DCCReference Include="DCPconst.pas"/>
+        <DCCReference Include="DCPcrypt2.pas"/>
+        <DCCReference Include="Ciphers\DCPblowfish.pas"/>
+        <DCCReference Include="Ciphers\DCPcast128.pas"/>
+        <DCCReference Include="Ciphers\DCPcast256.pas"/>
+        <DCCReference Include="Ciphers\DCPdes.pas"/>
+        <DCCReference Include="Ciphers\DCPgost.pas"/>
+        <DCCReference Include="Ciphers\DCPice.pas"/>
+        <DCCReference Include="Ciphers\DCPidea.pas"/>
+        <DCCReference Include="Ciphers\DCPmars.pas"/>
+        <DCCReference Include="Ciphers\DCPmisty1.pas"/>
+        <DCCReference Include="Ciphers\DCPrc2.pas"/>
+        <DCCReference Include="Ciphers\DCPrc4.pas"/>
+        <DCCReference Include="Ciphers\DCPrc5.pas"/>
+        <DCCReference Include="Ciphers\DCPrc6.pas"/>
+        <DCCReference Include="Ciphers\DCPrijndael.pas"/>
+        <DCCReference Include="Ciphers\DCPtea.pas"/>
+        <DCCReference Include="Ciphers\DCPtwofish.pas"/>
+        <DCCReference Include="Hashes\DCPhaval.pas"/>
+        <DCCReference Include="Hashes\DCPmd4.pas"/>
+        <DCCReference Include="Hashes\DCPmd5.pas"/>
+        <DCCReference Include="Hashes\DCPripemd128.pas"/>
+        <DCCReference Include="Hashes\DCPripemd160.pas"/>
+        <DCCReference Include="Hashes\DCPsha1.pas"/>
+        <DCCReference Include="Hashes\DCPtiger.pas"/>
+        <DCCReference Include="DCPreg.pas"/>
+        <DCCReference Include="Ciphers\DCPserpent.pas"/>
+        <DCCReference Include="Hashes\DCPsha256.pas"/>
+        <DCCReference Include="Hashes\DCPsha512.pas"/>
+        <None Include="dcp.inc"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>
